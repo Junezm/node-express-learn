@@ -2,12 +2,7 @@ var express = require('express');
 var app = express();
 var handlebars = require('express3-handlebars').create({defaultLayout: 'main'});
 
-var fortunes = [
-		"hello 1",
-		"world 2",
-		"html 3",
-		"javascript 4"
-]
+var fortune = require('./lib/fortune.js');
 
 app.set('port', process.env.PORT || 3001);
 //中间件 创建静态文件路由
@@ -22,9 +17,9 @@ app.get('/', function (req, res) {
 	res.render('home');
 });
 app.get('/about', function (req, res) {
-	var randomFortune = fortunes[Math.floor(Math.random()*fortunes.length)];
+	
 	res.render('about',{
-		fortune: randomFortune
+		fortune: fortune.getFortune()
 	});
 })
 
