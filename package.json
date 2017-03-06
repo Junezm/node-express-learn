@@ -1,0 +1,16 @@
+{
+  "name": "node-express-learn01",
+  "version": "1.0.0",
+  "description": "node project",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.1",
+    "express3-handlebars": "^0.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "june",
+  "license": "ISC"
+}
